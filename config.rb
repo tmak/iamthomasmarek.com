@@ -46,6 +46,7 @@ set :css_dir, "stylesheets"
 set :js_dir, "javascripts"
 set :images_dir, "images"
 
+activate :minify_html
 activate :gzip, exts: %w(.html .htm .js .css .svg)
 
 activate :s3_sync do |config|
