@@ -48,8 +48,6 @@ set :images_dir, "images"
 
 activate :gzip
 
-# set :slim, { pretty: true }
-
 activate :s3_sync do |config|
   config.bucket                     = ENV["S3_BUCKET"]
   config.region                     = ENV["S3_REGION"]
