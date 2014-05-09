@@ -1,8 +1,151 @@
 @import "normalize";
 
+// For debugging purposes
+//
+//div {
+//  border: 1px solid black;
+//}
+
+html {
+  font-family: Roboto, "helvetica neue", helvetica, arial, sans-serif;
+  color: #4a4a4a;
+  font-size: 16px;
+}
+
+body {
+  font-size: 1em;
+  margin: 0 auto;
+  max-width: 42em;
+  padding: 15px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
+}
+
+footer {
+  color: #b5b5b5;
+  font-size: 0.7em;
+  text-align: center;
+}
+
+#introduction {
+  .portrait {
+    padding-bottom: 15px;
+    text-align: center;
+
+    img {
+      height: 8em;
+      width: 8em;
+    }
+  }
+
+  strong {
+    color: #000;
+  }
+
+  h1, h2 {
+    font-size: 1.46em;
+    font-weight: normal;
+    text-align: left;
+    margin: 0;
+  }
+}
+
+.centered-content {
+}
+
+#social_icons {
+  text-align: center;
+  padding: 2.5em 0;
+
+  a {
+    img {
+      height: 3em;
+      width: 3em;
+      margin: 0 5px;
+    }
+  }
+}
+
+@media (min-width: 540px) {
+  #introduction {
+    h1, h2 {
+      font-size: 1.5em;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    padding: 25px;
+  }
+
+  #introduction {
+    .portrait {
+      padding-bottom: 25px;
+    }
+    h1, h2 {
+      font-size: 1.6em;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  #introduction {
+    h1, h2 {
+      font-size: 1.72em;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 20px;
+  }
+
+  body {
+    padding: 40px;
+  }
+
+  #introduction {
+    .portrait {
+      padding-bottom: 40px;
+
+      img {
+        height: 8.5em;
+        width: 8.5em;
+      }
+    }
+  }
+}
+
+@media (min-width: 1210px) {
+  html {
+    font-size: 20px;
+  }
+
+  #introduction {
+    position: relative;
+
+    .portrait {
+      position: absolute;
+      left: -10.3em;
+    }
+
+    h1 {
+      padding-top: 1.15em;
+    }
+
+    h2 {
+      padding-bottom: 1.15em;
+    }
+  }
 }
