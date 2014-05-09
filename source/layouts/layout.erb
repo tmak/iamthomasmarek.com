@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= inline_stylesheet("all.css") %>
-  <title><%= current_page.data.title || "I'm Thomas Marek" %></title>
-  <meta name="description" content="<%= current_page.data.description || "I'm Thomas Marek" %>">
+  <%= inline_stylesheet(current_page.data.inline_stylesheet) %>
+  <title><%= current_page.data.title %></title>
+  <meta name="description" content="<%= current_page.data.description %>">
   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120-precomposed.png">
