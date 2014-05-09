@@ -50,6 +50,29 @@ activate :gzip
 
 # set :slim, { pretty: true }
 
+activate :s3_sync do |config|
+  config.bucket                     = ENV["S3_BUCKET"]
+  config.region                     = ENV["S3_REGION"]
+  config.delete                     = false
+  config.after_build                = false
+  config.prefer_gzip                = true
+  config.path_style                 = false
+  config.reduced_redundancy_storage = false
+  config.acl                        = "public-read"
+  config.encryption                 = false
+end
+
+default_caching_policy max_age: 1576800000
+caching_policy "application/xml", s_maxage: 1576800000, max_age: 0
+caching_policy "text/html", s_maxage: 1576800000, max_age: 0
+caching_policy "text/plain", s_maxage: 1576800000, max_age: 0
+
+activate :cloudfront do |config|
+  config.access_key_id = ENV["AWS_ACCESS_KEY_ID"]
+  config.secret_access_key = ENV["AWS_SECRET_ACCESS_KEY"]
+  config.distribution_id =  ENV["CLOUDFRONT_DISTRIBUTION_ID"]
+end
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment

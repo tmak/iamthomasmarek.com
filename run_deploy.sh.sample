@@ -1,0 +1,9 @@
+export AWS_ACCESS_KEY_ID=''
+export AWS_SECRET_ACCESS_KEY=''
+export S3_REGION=''
+export S3_BUCKET=''
+export CLOUDFRONT_DISTRIBUTION_ID=''
+rm -rf build
+bin/middleman build
+bin/middleman s3_sync
+bin/middleman invalidate
