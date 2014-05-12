@@ -7,6 +7,9 @@
   <%= inline_stylesheet(current_page.data.inline_stylesheet) %>
   <title><%= current_page.data.title %></title>
   <meta name="description" content="<%= current_page.data.description %>">
+<% if current_page.data.meta_robots %>
+  <meta name="robots" content="<%= current_page.data.meta_robots %>">
+<% end %>
   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120-precomposed.png">
