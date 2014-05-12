@@ -63,7 +63,7 @@ activate :s3_sync do |config|
   config.delete                     = false
   config.after_build                = false
   config.prefer_gzip                = true
-  config.path_style                 = false
+  config.path_style                 = true
   config.reduced_redundancy_storage = false
   config.acl                        = "public-read"
   config.encryption                 = false
