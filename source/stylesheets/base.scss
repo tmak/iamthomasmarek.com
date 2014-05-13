@@ -1,5 +1,7 @@
 @import "vendor/normalize";
 
+$link-color: #2d7ddc;
+
 html {
   font-family: Roboto, "helvetica neue", helvetica, arial, sans-serif;
   color: #4a4a4a;
@@ -10,15 +12,40 @@ body {
   font-size: 1em;
 }
 
+a {
+  text-decoration: none;
+  border-bottom: 2px solid #ededed;
+  cursor: pointer;
+  transition: 250ms ease-out;
+  transition-property: border-color;
+
+  &:hover {
+    border-bottom-color: $link-color;
+  }
+}
+
+a, a:hover, a:visited {
+  color: $link-color;
+}
+
 .nowrap {
   white-space: nowrap;
 }
 
 .browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
+  margin: 0;
+  padding: 1rem;
+  background: #ff9389;
   color: #000;
-  padding: 0.2em 0;
+  text-align: center;
+  
+  a {
+    border-bottom-color: #ff9389;
+
+    &:hover {
+      border-bottom-color: $link-color;
+    }
+  }
 }
 
 footer {
