@@ -28,6 +28,14 @@ a, a:hover, a:visited {
   color: $link-color;
 }
 
+h1 {
+  line-height: 1.35;
+}
+
+p, ul, ol {
+  line-height: 1.5;
+}
+
 .nowrap {
   white-space: nowrap;
 }
@@ -52,4 +60,5 @@ footer {
   color: #b5b5b5;
   font-size: 0.7em;
   text-align: center;
+  margin: 15px;
 }

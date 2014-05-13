@@ -1,45 +1,91 @@
 @import "base";
 
-body {
-  margin: 0 auto;
-  max-width: 42em;
-  padding: 15px;
+#content, footer {
+  margin: 20px 15px;
+  max-width: 41rem;
 }
 
 #introduction {
   .portrait {
-    padding-bottom: 15px;
+    padding-bottom: 20px;
     text-align: center;
+    height: 8rem;
 
     img {
-      height: 8em;
-      width: 8em;
+      height: 8rem;
+      width: 8rem;
     }
   }
 
-  strong {
-    color: #000;
-  }
-
-  h1, h2 {
+  h1 {
     font-size: 1.46em;
     font-weight: normal;
     text-align: left;
-    margin: 0;
+    margin: 0 0 3.2rem 0;
+  }
+
+  strong, h2 {
+    color: #000;
+  }
+
+  h2 {
+    font-weight: normal;
+    margin: 1.1em 0 0.45em 0;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0.45em 0;
+    padding-left: 20px;
+
+    li {
+      position: relative;
+
+      &:before {
+        color: #b5b5b5;
+        content: "*";
+        left: -1.1rem;
+        position: absolute;
+        top: 0.15rem;
+      }
+
+      strong {
+        color: #4a4a4a;
+      }
+
+      .second-choice {
+        color: #b5b5b5;
+      }
+    }
+
+    &.work-history {
+      .duration-and-location {
+        color: #b5b5b5;
+      }
+    }
+
+    &.spare-time {
+      .comment {
+        color: #b5b5b5;
+      }
+    }
   }
 }
 
-.centered-content {
+#contact-me {
+  margin: 3.2rem 0;
 }
 
-#social_icons {
+#social-icons {
   text-align: center;
-  padding: 2.5em 0;
+  margin: 3.5rem 0 2.5rem 0;
 
   a {
+    border: 0;
+
     img {
-      height: 3em;
-      width: 3em;
+      height: 3rem;
+      width: 3rem;
       margin: 0 5px;
     }
   }
@@ -47,31 +93,47 @@ body {
 
 @media (min-width: 540px) {
   #introduction {
-    h1, h2 {
+    h1 {
       font-size: 1.5em;
     }
   }
 }
 
 @media (min-width: 600px) {
-  body {
-    padding: 25px;
+  #content, footer {
+    margin: 25px;
   }
 
   #introduction {
     .portrait {
       padding-bottom: 25px;
     }
-    h1, h2 {
+    h1 {
       font-size: 1.6em;
     }
   }
 }
 
 @media (min-width: 700px) {
+  #content, footer {
+    margin: 25px auto;
+  }
+
   #introduction {
-    h1, h2 {
+    h1 {
       font-size: 1.72em;
+    }
+  }
+}
+
+@media (min-width: 860px) {
+  #introduction {
+    ul {
+      padding-left: 0;
+
+      li:before {
+        left: -1.3rem;
+      }
     }
   }
 }
@@ -81,37 +143,34 @@ body {
     font-size: 20px;
   }
 
-  body {
-    padding: 40px;
+  #content, footer {
+    margin: 40px auto;
   }
 
   #introduction {
     .portrait {
       padding-bottom: 40px;
+      height: 8.5rem;
 
       img {
-        height: 8.5em;
-        width: 8.5em;
+        height: 8.5rem;
+        width: 8.5rem;
       }
     }
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1380px) {
   #introduction {
     position: relative;
 
     .portrait {
       position: absolute;
-      left: -10.3em;
+      left: -10.3rem;
     }
 
     h1 {
-      padding-top: 1.15em;
-    }
-
-    h2 {
-      padding-bottom: 1.15em;
+      padding: 1.15rem 0 1.15rem 0;
     }
   }
 }
