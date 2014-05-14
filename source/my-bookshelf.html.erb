@@ -1,0 +1,20 @@
+---
+title: My Bookshelf - Hello, I'm Thomas Marek
+description: Pragmatic minded Web Application Developer.
+inline_stylesheet: books.css
+sitemap_lastmod: 2014-05-14
+sitemap_changefreq: weekly
+body_class: bookshelf
+---
+<% content_for :header do %>
+  <h1>
+    My Bookshelf
+  </h1>
+<% end %>
+<div id="bookshelf">
+  <% books.each do |book| %>
+    <a href="<%= book["url"] %>" target="_blank" rel="nofollow">
+      <img src="/images/books/<%= book["image"] %>" alt="<%= "#{book["title"]} by #{book["authors"].to_sentence}" %>">
+    </a>
+  <% end %>
+</div>

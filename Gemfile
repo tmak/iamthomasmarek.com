@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem "activesupport"
 gem "middleman"
 gem "middleman-favicon-maker"
 gem "middleman-minify-html"

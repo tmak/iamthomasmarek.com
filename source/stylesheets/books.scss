@@ -1,0 +1,38 @@
+@import "base";
+
+body.bookshelf {
+  header h1 {
+    text-align: center;
+  }
+}
+
+#bookshelf {
+  text-align: center;
+
+  a {
+    text-align: center;
+    border: none;
+    display: block;
+    margin: 60px 0;
+
+    img {
+      width: 100%;
+      max-width: 280px;
+      box-shadow: 0px 5px 15px #888888;
+      transition: 250ms ease-out;
+      transition-property: box-shadow;
+    }
+
+    &:hover img {
+      box-shadow: 0px 5px 15px $link-color;
+    }
+  }
+}
+
+@media (min-width: 1380px) {
+  body.bookshelf {
+    header h1 {
+      text-align: left;
+    }
+  }
+}

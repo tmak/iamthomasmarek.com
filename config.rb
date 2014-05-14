@@ -52,12 +52,17 @@ helpers do
   def sitemap_pages
     sitemap.resources.find_all{|page| page.ext == ".html" && page.data.sitemap_lastmod.present? && page.data.sitemap_changefreq.present? }
   end
+
+  def books
+    YAML.load_file(File.expand_path("../books.yml", __FILE__))
+  end
 end
 
 set :css_dir, "stylesheets"
 set :js_dir, "javascripts"
 set :images_dir, "images"
 
+activate :directory_indexes
 activate :minify_html
 
 activate :s3_sync do |config|

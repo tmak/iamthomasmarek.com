@@ -1,19 +1,19 @@
 ---
 title: Hello, I'm Thomas Marek
 description: Pragmatic minded Web Application Developer.
-inline_stylesheet: normal.css
+inline_stylesheet: home.css
 sitemap_lastmod: 2014-05-14
 sitemap_changefreq: weekly
+body_class: home
 ---
-<div id="introduction">
-  <div class="headshot">
-    <img src="images/headshot-white-background.jpg" alt="Headshot">
-  </div>
-  <h1>
+<% content_for :header do %>
+  <h1 class="two-lines">
     Hello, I'm <strong class="nowrap">Thomas Marek</strong>.<br>
     Pragmatic minded <strong class="nowrap">Web Application Developer</strong>.
   </h1>
+<% end %>
 
+<div id="introduction">
   <h2>Weapons of choice</h2>
   <ul class="weapons-of-choice">
     <li>Agile Development, BDD, Kanban, <span class="second-choice">Scrum</span>, Responsive Design</li>
@@ -55,7 +55,7 @@ sitemap_changefreq: weekly
 
   <h2>Spare-time activities</h2>
   <ul class="spare-time">
-    <li>Eating nonfiction books for lunch</li>
+    <li>Eating nonfiction books for lunch <span class="comment">(checkout <a href="/my-bookshelf/">my bookshelf</a>)</span></li>
     <li>Listening to <a href="http://www.thisamericanlife.org" target="_blank" rel="nofollow">This American Life</a></li>
     <li>Basketball <span class="comment">(watching and playing)</span></li>
     <li>P90X <span class="comment">(let's say it's a love-hate relationship)</span></li>
@@ -67,7 +67,7 @@ sitemap_changefreq: weekly
   </p>
 </div>
 <div id="social-icons">
-  <a href="https://github.com/tmak" title="Follow me on GitHub" target="_blank"><img src="images/github.svg" alt="GitHub"></a>
-  <a href="http://www.linkedin.com/in/thomasmarekrubydeveloper" title="Connect with me on LinkedIn" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn"></a>
-  <a href="https://plus.google.com/101832935727318955683/about" title="Connect with me on Google+" target="_blank"><img src="images/google-plus.svg" alt="Google+"></a>
+  <a href="https://github.com/tmak" title="Follow me on GitHub" target="_blank"><img src="/images/github.svg" alt="GitHub"></a>
+  <a href="http://www.linkedin.com/in/thomasmarekrubydeveloper" title="Connect with me on LinkedIn" target="_blank"><img src="/images/linkedin.svg" alt="LinkedIn"></a>
+  <a href="https://plus.google.com/101832935727318955683/about" title="Connect with me on Google+" target="_blank"><img src="/images/google-plus.svg" alt="Google+"></a>
 </div>

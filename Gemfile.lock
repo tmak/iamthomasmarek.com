@@ -161,6 +161,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport
   middleman
   middleman-cloudfront
   middleman-favicon-maker

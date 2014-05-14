@@ -1,11 +1,13 @@
 @import "vendor/google-fonts";
 @import "vendor/normalize";
 
+$default-text-color: #4a4a4a;
 $link-color: #2d7ddc;
+$link-line-color: #ededed;
 
 html {
   font-family: Roboto, "helvetica neue", helvetica, arial, sans-serif;
-  color: #4a4a4a;
+  color: $default-text-color;
   font-size: 16px;
 }
 
@@ -13,9 +15,13 @@ body {
   font-size: 1em;
 }
 
+h1, h2, h3 {
+  color: #000;
+}
+
 a {
   text-decoration: none;
-  border-bottom: 2px solid #ededed;
+  border-bottom: 0.15em solid $link-line-color;
   cursor: pointer;
   transition: 250ms ease-out;
   transition-property: border-color;
@@ -57,9 +63,150 @@ p, ul, ol {
   }
 }
 
+#container {
+  margin: 0 15px;
+  max-width: 41rem;
+}
+
+header {
+  nav {
+    text-align: right;
+    margin-top: 0.65rem;
+    height: 3rem;
+
+    a {
+      border-top: 0.25rem solid $default-text-color;
+      border-bottom: 0;
+      color: $default-text-color;
+      padding-top: 0.4rem;
+      margin-left: 1rem;
+      transition: 250ms ease-out;
+      transition-property: color, border-color;
+
+      &:visited {
+        color: $default-text-color;
+      }
+
+      &:hover {
+        border-top-color: $link-color;
+        color: $link-color;
+      }
+    }
+  }
+
+  .headshot {
+    padding-bottom: 20px;
+    text-align: center;
+    height: 8rem;
+
+    img {
+      height: 8rem;
+      width: 8rem;
+    }
+  }
+
+  h1 {
+    font-size: 1.46em;
+    margin: 0;
+  }
+}
+
+#content {
+  margin: 1.5rem 0;
+}
+
+footer {
+  margin: 20px 15px;
+}
+
 footer {
   color: #b5b5b5;
   font-size: 0.7em;
   text-align: center;
   margin: 15px;
+}
+
+
+@media (min-width: 540px) {
+  header {
+    h1 {
+      font-size: 1.5em;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  #container {
+    margin: 0 25px;
+  }
+
+  header {
+    .headshot {
+      padding-bottom: 25px;
+    }
+    h1 {
+      font-size: 1.6em;
+    }
+  }
+
+  footer {
+    margin: 25px;
+  }
+}
+
+@media (min-width: 700px) {
+  #container {
+    margin: 0 auto
+  }
+
+  header {
+    h1 {
+      font-size: 1.72em;
+    }
+  }
+
+  footer {
+    margin: 25px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 20px;
+  }
+
+  header {
+    .headshot {
+      padding-bottom: 40px;
+      height: 8.5rem;
+
+      img {
+        height: 8.5rem;
+        width: 8.5rem;
+      }
+    }
+  }
+
+  footer {
+    margin: 40px;
+  }
+}
+
+@media (min-width: 1380px) {
+  header {
+    position: relative;
+
+    .headshot {
+      position: absolute;
+      left: -10.3rem;
+    }
+
+    h1 {
+      padding: 2.9rem 0 3.3rem 0;
+
+      &.two-lines {
+        padding: 1.9rem 0 2.1rem 0;
+      }
+    }
+  }
 }
