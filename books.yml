@@ -23,6 +23,11 @@
   url: "http://www.amazon.com/Growing-Object-Oriented-Software-Guided-Tests/dp/0321503627"
   image: "growing-object-oriented-software-guided-by-tests.jpg"
 
+- title: "Patterns of Enterprise Application Architecture"
+  authors: ["Martin Fowler"]
+  url: "http://www.amazon.com/Enterprise-Application-Architecture-Addison-Wesley-Signature-ebook/dp/B008OHVDFM"
+  image: "patterns-of-enterprise-application-architecture.jpg"
+
 - title: "Practices of an Agile Developer"
   authors: ["Venkat Subramaniam", "Andy Hunt"]
   url: "http://pragprog.com/book/pad/practices-of-an-agile-developer"
@@ -31,12 +36,12 @@
 - title: "Rails AntiPatterns: Best Practice Ruby on Rails Refactoring"
   authors: ["Chad Pytel", "Tammer Saleh"]
   url: "http://www.amazon.com/Rails-AntiPatterns-Refactoring-Addison-Wesley-Professional-ebook/dp/B004C04QE0"
-  image: "patterns-of-enterprise-application-architecture.jpg"
+  image: "rails-antipatterns-best-practice-ruby-on-rails-refactoring.jpg"
 
 - title: "Refactoring: Improving the Design of Existing Code"
   authors: ["Martin Fowler"]
   url: "http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672"
-  image: "rails-antipatterns-best-practice-ruby-on-rails-refactoring.jpg"
+  image: "refactoring-improving-the-design-of-existing-code.jpg"
 
 - title: "ReWork: Change the Way You Work Forever"
   authors: ["Jason Fried", "David Heinemeier Hansson"]
