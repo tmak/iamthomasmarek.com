@@ -48,6 +48,10 @@ helpers do
       sprockets[path].to_s
     end
   end
+
+  def sitemap_pages
+    sitemap.resources.find_all{|page| page.ext == ".html" && page.data.sitemap_lastmod.present? && page.data.sitemap_changefreq.present? }
+  end
 end
 
 set :css_dir, "stylesheets"
