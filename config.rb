@@ -55,7 +55,6 @@ set :js_dir, "javascripts"
 set :images_dir, "images"
 
 activate :minify_html
-activate :gzip, exts: %w(.html .htm .js .css .svg)
 
 activate :s3_sync do |config|
   config.bucket                     = ENV["S3_BUCKET"]
@@ -109,4 +108,6 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+
+  activate :gzip, exts: %w(.html .htm .js .css .svg .ico)
 end

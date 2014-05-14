@@ -9,10 +9,9 @@ rm -rf build
 bin/middleman build
 bin/middleman s3_sync
 
-# Overwrite cache control for favicons
+# Fix cache control for favicons
+aws s3 cp build/favicon.ico.gz s3://$S3_BUCKET/favicon.ico --acl=public-read --content-encoding="gzip" --cache-control="s-maxage=1576800000, max-age=43200"
 aws s3 rm s3://$S3_BUCKET/ --recursive --exclude "*" --include "apple-touch-icon-*.png"
 aws s3 sync build/ s3://$S3_BUCKET/ --acl=public-read --cache-control="s-maxage=1576800000, max-age=43200" --exclude "*" --include "apple-touch-icon-*.png"
-aws s3 rm s3://$S3_BUCKET/ --recursive --exclude "*" --include "favicon.*"
-aws s3 sync build/ s3://$S3_BUCKET/ --acl=public-read --cache-control="s-maxage=1576800000, max-age=43200" --exclude "*" --include "favicon.*"
 
 bin/middleman invalidate
