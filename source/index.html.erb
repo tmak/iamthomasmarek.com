@@ -5,11 +5,13 @@ inline_stylesheet: home.css
 sitemap_lastmod: 2014-05-14
 sitemap_changefreq: weekly
 body_class: home
+container_tag_attributes: itemscope itemtype="http://schema.org/Person"
+header_headshot_tag_attributes: itemprop="image"
 ---
 <% content_for :header do %>
   <h1 class="two-lines">
-    Hello, I'm <strong class="nowrap">Thomas Marek</strong>.<br>
-    Pragmatic minded <strong class="nowrap">Web Application Developer</strong>.
+    Hello, I'm <strong class="nowrap" itemprop="name">Thomas Marek</strong>.<br>
+    Pragmatic minded <strong class="nowrap" itemprop="jobTitle">Web Application Developer</strong>.
   </h1>
 <% end %>
 
@@ -34,7 +36,7 @@ body_class: home
 
   <h2>Work history</h2>
   <ul class="work-history">
-    <li><strong class="nowrap">Web Application Developer</strong> as a Freelancer <span class="duration-and-location">(<span class="nowrap">1 year and counting;</span> <span class="nowrap">Cologne, Germany</span>)</span></li>
+    <li><strong class="nowrap">Web Application Developer</strong> as a Freelancer <span class="duration-and-location">(<span class="nowrap">1 year and counting;</span> <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span class="nowrap"><span itemprop="addressLocality">Cologne</span>, <span itemprop="addressCountry">Germany</span></span></span>)</span></li>
     <li><strong class="nowrap">Lead Web Application Developer</strong> at <a href="http://www.uswitch.ie" target="_blank" rel="nofollow">uSwitch.ie</a> <span class="duration-and-location">(<span class="nowrap">1 year;</span> <span class="nowrap">Dublin, Ireland</span>)</span></li>
     <li><strong class="nowrap">Software Developer</strong> and <strong class="nowrap">Scrum Master</strong> at <a href="http://www.biosolveit.de" target="_blank" rel="nofollow">BioSolveIT GmbH</a> <span class="duration-and-location">(<span class="nowrap">10 years;</span> <span class="nowrap">Cologne, Germany</span>)</span></li>
   </ul>
@@ -72,3 +74,10 @@ body_class: home
   <a href="http://www.linkedin.com/in/thomasmarekrubydeveloper" title="Connect with me on LinkedIn" target="_blank" rel="me"><img src="/images/linkedin.svg" alt="LinkedIn"></a>
   <a href="https://plus.google.com/101832935727318955683/about" title="Connect with me on Google+" target="_blank" rel="me"><img src="/images/google-plus.svg" alt="Google+"></a>
 </div>
+
+<meta itemprop="givenName" content="Thomas">
+<meta itemprop="familyName" content="Marek">
+<meta itemprop="nationality" content="German">
+<meta itemprop="gender" content="male">
+<meta itemprop="url" content="http://iamthomasmarek.com">
+<meta itemprop="email" content="hello@iamthomasmarek.com">
