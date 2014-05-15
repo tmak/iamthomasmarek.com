@@ -15,7 +15,7 @@ body {
   font-size: 1em;
 }
 
-h1, h2, h3 {
+h2, h3 {
   color: #000;
 }
 
@@ -108,6 +108,11 @@ header {
   h1 {
     font-size: 1.46em;
     margin: 0;
+    font-weight: normal;
+
+    strong {
+      color: #000;
+    }
   }
 }
 
