@@ -78,6 +78,7 @@ activate :s3_sync do |config|
 end
 
 default_caching_policy max_age: 1576800000
+caching_policy "application/pdf", s_maxage: 1576800000, max_age: 0
 caching_policy "application/xml", s_maxage: 1576800000, max_age: 0
 caching_policy "text/html", s_maxage: 1576800000, max_age: 0
 caching_policy "text/plain", s_maxage: 1576800000, max_age: 0
@@ -118,5 +119,5 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 
-  activate :gzip, exts: %w(.html .htm .js .css .svg .ico)
+  activate :gzip, exts: %w(.html .htm .js .css .pdf .svg .ico)
 end
